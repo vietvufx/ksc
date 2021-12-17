@@ -1,0 +1,36 @@
+<section>
+    <div class="container news-content">
+        <div class="row g-2">
+            <div class="col-lg-8 col-sm-12">
+                <div class="p-3 left-content">
+                    <h3 class="right-title-article padding-left-17px">Không sợ cháy - Phân tích Tâm lý</h3>
+                    <div class="global-artical">
+                        <a href="details/{{firstSentiment.code}}" class="global-article-show-first">
+                            <div class="global-article-show-first-left">
+                                <img class="big-img" src={{firstSentiment.image}} alt={{firstSentiment.alt}}>
+                            </div>
+                            <div class="global-article-show-first-right">
+                                <h5 class="font-size-16 padding-t-10px">{{firstSentiment.title | titlecase}}</h5>
+                                <p class="font-size-14" [innerHTML]="firstSentiment.shortContent"></p>
+                            </div>
+                        </a>
+                        <a href="details/{{data.code}}" class="global-article-show" *ngFor="let data of listSentiment">
+                            <img class="small-img" src={{data.image}} alt={{data.alt}}>
+                            <h5 class="font-size-16 padding-t-10px limit-description-2" [innerHTML]="data.title | titlecase"></h5>
+                            <p class="font-size-14 limit-description-4" [innerHTML]="data.shortContent"></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button (click)="showmoreOnclick()" class="btn btn-showmore" type="button">Xem thêm</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <div class="p-3 right-content">
+                    <app-newsreview></app-newsreview>
+                    <app-othernews></app-othernews>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

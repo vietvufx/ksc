@@ -1,0 +1,42 @@
+<div class="container">
+    <select class="form-select form-select-sm mb-3" [(ngModel)]="typePost" aria-label=".form-select-lg example">
+      <option value="TIN_TUC_CAP_NHAT">Tin tức cập nhật</option>
+      <option value="TIN_TUC_NHAN_DINH">Tin tức nhận định</option>
+      <option value="TIN_TUC_KIEN_THUC">Kiến thức</option>
+      <option value="TIN_TUC_BEN_LE">Tin tức Tổng hợp</option>
+      <!-- <option value="QUAN_DIEM_INTERBANK">Quan điểm Global Interbank</option>
+        <option value="TIEU_DIEM_THI_TRUONG">Tiêu điểm thị trường</option> -->
+      <option value="DU_LIEU_KINH_TE">Kiến thức - PT Tâm lý</option>
+      <option value="PHAN_TICH_CO_BAN">Kiến thức - PT Cơ bản</option>
+      <option value="PHAN_TICH_KY_THUAT">Kiến thức - PT Kỹ thuật</option>
+      <!-- <option value="HE_THONG_GIAO_DICH">Hệ thống giao dịch</option>
+        <option value="BAI_VIET_LIEN_QUAN">SPDR_Gold_Trust</option> -->
+    </select>
+
+    <label class="user" for="news_title"><span class="hidden">TIÊU ĐỀ: </span></label>
+    <input id="news_title" type="text" class="form-input form-control" placeholder="Title" required [(ngModel)]="title"><br>
+    <div class="form-group">
+        <label for="file">Choose File</label>
+        <input type="file" id="file" (change)="handleFileInput($event)" />
+        <input type="input" placeholder="alt" [(ngModel)]="alt" />
+    </div>
+    <br>
+    <br>
+    <label class="user" for="short_content"><span class="hidden">Nội dung sơ lược: </span></label>
+    <angular-editor [(ngModel)]="shortContent" [config]="config"></angular-editor>
+    <br>
+    <br>
+    <label class="user" for="short_content"><span class="hidden">Nội dung chi tiết: </span></label>
+    <angular-editor [(ngModel)]="content" [config]="config"></angular-editor>
+    <div class="html">
+        {{ shortContent }}
+    </div>
+    <div class="html">
+        {{ content }}
+    </div>
+    <div class="row justify-content-sm-between">
+        <button type="button" class="btn btn-secondary small" (click)="onSave()">Save</button>
+        <button type="button" class="btn btn-success small" (click)="onUpload()">Upload</button>
+    </div>
+    <div *ngIf="isLoading">{{ isLoading }} </div>
+</div>

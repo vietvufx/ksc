@@ -1,0 +1,30 @@
+.border_menu {
+    border-bottom: 1px solid rgba(145, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 575.98px) {
+    .nar-border {
+        border-top: 1px solid rgba(145, 0, 0, 0.2);
+    }
+}
+
+.nav-link {
+    color: rgb(145, 0, 0);
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #ff5733;
+}
+
+.menu-border {
+    border-bottom: 1px solid rgba(145, 0, 0, 0.2);
+}
+
+.nav-item .nav-link {
+    font-weight: bold;
+}
+
+#navbarNav {
+    justify-content: space-between;
+}

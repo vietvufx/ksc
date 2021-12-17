@@ -1,0 +1,37 @@
+<div class="container news-content">
+    <div class="row g-2">
+        <div class="col-lg-8 col-sm-12">
+            <div class="p-3 left-content">
+                <div class="breadcrumb-2">
+                    <h1 on class="right-title-article">{{articleDetail.title | titlecase}}</h1>
+                    <div><span class="article-time">Thời gian: {{articleDetail.time}}</span></div>
+                </div>
+
+                <div class="content-detail">
+                    <p class="font-size-14" [innerHTML]="articleDetail.shortContent">
+                    </p>
+                    <img *ngIf="articleDetail.alt" width="100%" src={{articleDetail.image}} alt={{articleDetail.alt}}>
+                    <div class="fit-content font-size-14" [innerHTML]="articleDetail.content">
+                    </div>
+                    <span>
+                        <br>
+                        <a class="tag_name" target="blank"
+                            href="https://www.google.com.vn/search?q={{articleDetail.title}}+không+sợ+cháy">#GG Search:
+                            {{articleDetail.title}}</a>
+                        <a class="tag_name" target="blank"
+                            href="https://www.google.com.vn/search?q=vàng+phái+sinh">#Vàng_phái_sinh</a>
+                        <a class="tag_name" target="blank"
+                            href="https://www.google.com.vn/search?q=golden+fund">#GoldenFund</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <div class="p-3 right-content">
+                <app-newsknowledge></app-newsknowledge>
+                <app-newsreview></app-newsreview>
+                <app-othernews></app-othernews>
+            </div>
+        </div>
+    </div>
+</div>

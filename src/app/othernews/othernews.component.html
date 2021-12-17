@@ -1,0 +1,15 @@
+<h3 class="right-title-article padding-top-20px ">Tin tức Tổng hợp</h3>
+<a href="details/{{data.code}}" *ngFor="let data of otherNews">
+    <div class="right-article-content">
+        <div class="img-area">
+            <img src={{data.image}} alt={{data.alt}} class="future-img">
+        </div>
+        <div class="content-area">
+            <h5 class="font-size-14 news-inner">
+                {{data.title | titlecase}}
+            </h5>
+            <p class="font-size-14 news-inner" [innerHTML]="data.shortContent">
+            </p>
+        </div>
+    </div>
+</a>

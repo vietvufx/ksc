@@ -1,0 +1,31 @@
+<div class="article-title">
+    <div class="article-title-left">
+        <h3 class="left-title-article">Tin tức cập nhật</h3>
+        <span class="left-description">{{time_now}}</span>
+    </div>
+</div>
+<div *ngFor="let data of newFeeds | slice:0:contentLenght">
+    <a href="details/{{data.code}}">
+        <div class="article-content">
+            <div data-v-c88f26b2="" class="custom-new-box-dot"></div>
+            <div class="article-time">
+                <p class="font-size-14">{{data.time}}</p>
+            </div>
+            <div class="article-description">
+                <h5 class="font-size-16 data-title-newfeeds">
+                    {{data.title}}
+                </h5>
+                <div class="font-size-14" [innerHTML]="data.shortContent">
+                </div>
+                <span>
+                    <br>
+                    <a class="tag_name" target="blank"
+                        href="https://www.google.com.vn/search?q={{data.title}}+không+sợ+cháy">#GG Search: {{data.title | titlecase}}</a>
+                </span>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="d-grid gap-2">
+    <button (click)="showmoreOnclick()" class="btn btn-showmore" type="button">Xem thêm</button>
+</div>

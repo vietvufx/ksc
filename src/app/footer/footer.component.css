@@ -1,0 +1,43 @@
+svg {
+    color: rgba(145, 0, 0, 0.5);
+    margin-right: 10px;
+}
+
+svg:hover {
+    color: rgba(145, 0, 0, 1);
+}
+
+.border_footer {
+    border-top: 1px solid rgba(145, 0, 0, 0.2);
+    padding-top: 20px;
+}
+
+.ft-content {
+    border-bottom: 1px solid rgba(145, 0, 0, 0.2);
+}
+
+a.link-refer:hover {
+    color: red;
+}
+
+a {
+    color: rgb(33, 37, 41);
+    text-decoration: none;
+}
+
+#bg-footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.font-size-14 {
+    font-size: 14.4px;
+}
+
+.padding-t-20px {
+    padding-top: 20px;
+}
+
+.set-icon {
+    padding-bottom: 20px;
+}

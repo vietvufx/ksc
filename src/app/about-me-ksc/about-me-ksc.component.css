@@ -1,0 +1,24 @@
+/* aboutme */
+
+.cl-about-me-full {
+    width: 100%;
+    padding-top: 30px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cl-about-me {
+    display: flex;
+}
+
+.cl-about-me-right {
+    width: 80%;
+    padding-left: 20px;
+}
+
+.cl-about-me-left {
+    width: 20%;
+}
